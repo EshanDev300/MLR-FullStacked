@@ -1,31 +1,21 @@
-// API URL automatically switches based on environment (.env or .env.production)
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+// On Vercel, the API routes live at the same origin (/api/...).
+// Locally during dev, they hit localhost:5000.
+const API_URL = import.meta.env.VITE_API_URL || '';
 
-/**
- * A reusable fetch client for backend communication.
- * Ready for deployment and production use.
- */
 export const apiClient = async (endpoint, options = {}) => {
-  try {
-    const response = await fetch(`${API_URL}${endpoint}`, {
-      ...options,
-      headers: {
-        'Content-Type': 'application/json',
-        ...options.headers,
-      },
-    });
-    
-    if (!response.ok) {
-      throw new Error(`API Request Failed: ${response.statusText}`);
-    }
-    
-    return await response.json();
-  } catch (error) {
-    console.error("API Fetch Error:", error);
-    throw error;
-  }
-};
+  const response = await fetch(`${API_URL}${endpoint}`, {
+    ...options,
+    headers: {
+      'Content-Type': 'application/json',
+      ...options.headers,
+    },
+  });
 
-// Example usage ready for backend integration:
-export const fetchUsers = () => apiClient('/api/users');
-export const submitOrder = (data) => apiClient('/api/orders', { method: 'POST', body: JSON.stringify(data) });
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.message || `API error: ${response.statusText}`);
+  }
+
+  return data;
+};
