@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Build output (Render will build this itself)
+dist/
+
+# Environment variables (NEVER push these)
+.env
+.env.production
+.env.local
+
+# Scratch files
+scratch/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
