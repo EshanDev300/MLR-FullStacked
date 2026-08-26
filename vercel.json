@@ -1,0 +1,10 @@
+{
+  "framework": "vite",
+  "buildCommand": "cd \"MLR_FullStacked/Source Code\" && npm install && npm run build",
+  "outputDirectory": "MLR_FullStacked/Source Code/dist",
+  "installCommand": "cd \"MLR_FullStacked/Source Code\" && npm install",
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
