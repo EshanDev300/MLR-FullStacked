@@ -1,0 +1,68 @@
+[
+  {
+    "id": "breakfast",
+    "name": "Breakfast & Brunch",
+    "icon": "Coffee",
+    "gradient": "from-amber-500/20 to-orange-500/20",
+    "border": "border-amber-500/30",
+    "accent": "text-amber-400",
+    "description": "Kickstart your day with energizing smoothies, fluffy pancakes, and savory egg creations.",
+    "count": 8,
+    "image": "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "lunch",
+    "name": "Power Lunch",
+    "icon": "Sun",
+    "gradient": "from-emerald-500/20 to-teal-500/20",
+    "border": "border-emerald-500/30",
+    "accent": "text-emerald-400",
+    "description": "Nourishing grain bowls, gourmet artisan wraps, and vibrant seasonal salads.",
+    "count": 12,
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "dinner",
+    "name": "Gourmet Dinner",
+    "icon": "Utensils",
+    "gradient": "from-purple-500/20 to-indigo-500/20",
+    "border": "border-purple-500/30",
+    "accent": "text-purple-400",
+    "description": "Hearty pasta, wood-fired roasts, pan-seared proteins, and fragrant stews.",
+    "count": 16,
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "snacks",
+    "name": "Quick Snacks",
+    "icon": "Zap",
+    "gradient": "from-pink-500/20 to-rose-500/20",
+    "border": "border-pink-500/30",
+    "accent": "text-pink-400",
+    "description": "Bite-sized appetizers, crispy tapas, energy bites, and dips ready under 15 minutes.",
+    "count": 10,
+    "image": "https://images.unsplash.com/photo-1621996346565-e3d5d6288339?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "desserts",
+    "name": "Sweet Desserts",
+    "icon": "Cake",
+    "gradient": "from-cyan-500/20 to-blue-500/20",
+    "border": "border-cyan-500/30",
+    "accent": "text-cyan-400",
+    "description": "Decadent chocolate lava cakes, berry tarts, creamy parfaits, and artisanal ice creams.",
+    "count": 9,
+    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "vegan",
+    "name": "Vegan & Plant-Based",
+    "icon": "Leaf",
+    "gradient": "from-green-500/20 to-emerald-500/20",
+    "border": "border-green-500/30",
+    "accent": "text-green-400",
+    "description": "Rich 100% plant-based recipes crafted for deep flavor, vitality, and health.",
+    "count": 11,
+    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "question": "What is the culinary term for finely chopping herbs or leafy greens into ribbon-like strips?",
+    "options": [
+      "Chiffonade",
+      "Julienne",
+      "Brunoise",
+      "Mirepoix"
+    ],
+    "answer": 0,
+    "explanation": "Chiffonade is a slicing technique in which leafy green vegetables such as spinach, sorrel, or Swiss chard, or a flat-leaved herb like basil, are cut into long, thin strips."
+  },
+  {
+    "question": "Which of the following is NOT one of the five French mother sauces?",
+    "options": [
+      "Bechamel",
+      "Veloute",
+      "Hollandaise",
+      "Chimichurri"
+    ],
+    "answer": 3,
+    "explanation": "Chimichurri is an uncooked sauce used for grilled meat, originally from Argentina. The five mother sauces are Bechamel, Veloute, Espagnole, Sauce Tomate, and Hollandaise."
+  },
+  {
+    "question": "What is the Maillard reaction?",
+    "options": [
+      "A chemical reaction between amino acids and reducing sugars that gives browned food its distinctive flavor",
+      "The process of yeast converting sugar to alcohol",
+      "The breaking of an emulsion when making mayonnaise",
+      "The coagulation of egg proteins"
+    ],
+    "answer": 0,
+    "explanation": "The Maillard reaction is a chemical reaction between amino acids and reducing sugars that gives browned food its distinctive flavor. Seared steaks, pan-fried dumplings, and breads all undergo this."
+  },
+  {
+    "question": "In baking, what is the process of docking?",
+    "options": [
+      "Folding dough",
+      "Pricking holes in dough to prevent blistering or rising",
+      "Glazing the top of pastry",
+      "Resting the dough"
+    ],
+    "answer": 1,
+    "explanation": "Docking refers to piercing dough, typically with a fork, to allow steam to escape so it bakes evenly and does not puff up."
+  },
+  {
+    "question": "What is Sous-vide cooking?",
+    "options": [
+      "Frying food in hot oil under pressure",
+      "Cooking food in a vacuum-sealed bag in a precisely regulated water bath",
+      "Steaming vegetables over boiling broth",
+      "Baking food covered with a thick crust of salt"
+    ],
+    "answer": 1,
+    "explanation": "Sous-vide is a method of cooking in which food is placed in a plastic pouch or a glass jar and cooked in a water bath for longer than usual cooking times at a precisely regulated temperature."
+  },
+  {
+    "question": "Which ingredient is the primary flavor in a traditional Béarnaise sauce?",
+    "options": [
+      "Tomato",
+      "Tarragon",
+      "Garlic",
+      "Basil"
+    ],
+    "answer": 1,
+    "explanation": "Béarnaise is a sauce made of clarified butter emulsified in egg yolks and white wine vinegar and flavored with herbs, primarily tarragon."
+  },
+  {
+    "question": "What is a Bouquet Garni?",
+    "options": [
+      "A fancy presentation of vegetables",
+      "A bundle of herbs tied together and used to flavor soups, stews, and broths",
+      "A type of edible flower used in salads",
+      "A French dessert made with spun sugar"
+    ],
+    "answer": 1,
+    "explanation": "A bouquet garni is a bundle of herbs usually tied together with string and mainly used to prepare soup, stock, casseroles and various stews."
+  },
+  {
+    "question": "What temperature (Fahrenheit) does water boil at sea level?",
+    "options": [
+      "100",
+      "180",
+      "212",
+      "250"
+    ],
+    "answer": 2,
+    "explanation": "At sea level, water boils at 212°F (100°C)."
+  }
+]

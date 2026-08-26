@@ -1,0 +1,64 @@
+[
+  {
+    "id": "tip-1",
+    "title": "Mastering Knife Skills: The Claw Grip Technique",
+    "category": "Technique",
+    "icon": "ChefHat",
+    "readTime": "3 min read",
+    "image": "/cooksmart-logo.png",
+    "videoUrl": "https://www.youtube.com/embed/Ydc_NefUCM0",
+    "summary": "Learn how top professional chefs cut vegetables twice as fast while keeping fingertips 100% safe using the fundamental claw grip position.",
+    "steps": [
+      "Curl your non-knife hand fingers inward like a bear claw.",
+      "Rest the flat side of the chef knife blade against your knuckle guide.",
+      "Use smooth rocking motions rather than chopping down aggressively.",
+      "Maintain a sharp chef's knife blade; dull knives cause twice as many slips!"
+    ]
+  },
+  {
+    "id": "tip-2",
+    "title": "The Secret to Perfect Pan-Seared Steak Crust (Maillard Reaction)",
+    "category": "Science",
+    "icon": "Flame",
+    "readTime": "4 min read",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
+    "videoUrl": "https://www.youtube.com/embed/Ydc_NefUCM0",
+    "summary": "Achieve a steakhouse-quality golden brown crust by controlling moisture, pan heat, and butter basting at the precise moment.",
+    "steps": [
+      "Pat the meat completely dry with paper towels 30 minutes before cooking.",
+      "Preheat heavy cast-iron skillet until smoking hot before adding high-smoke-point oil.",
+      "Sear without moving the steak for 2 minutes to allow Maillard browning.",
+      "Baste with whole butter, crushed garlic, and rosemary during the final minute."
+    ]
+  },
+  {
+    "id": "tip-3",
+    "title": "Spice Pairing Matrix: Elevating Every Flavor Profile",
+    "category": "Flavor",
+    "icon": "Sparkles",
+    "readTime": "5 min read",
+    "image": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=800&q=80",
+    "videoUrl": "https://www.youtube.com/embed/Ydc_NefUCM0",
+    "summary": "Understand how warm spices like cumin and coriander balance acidity and rich fats to transform everyday dishes into restaurant masterpieces.",
+    "steps": [
+      "Always bloom whole spices in hot oil or ghee for 30 seconds before adding liquids.",
+      "Balance heavy fat dishes (cream/cheese) with acid (lemon zest, sumac, or vinegars).",
+      "Store whole spices in airtight dark containers; replace ground spices every 6 months."
+    ]
+  },
+  {
+    "id": "tip-4",
+    "title": "How to Properly Season & Maintain Cast Iron Cookware",
+    "category": "Equipment",
+    "icon": "ShieldCheck",
+    "readTime": "3 min read",
+    "image": "https://images.unsplash.com/photo-1584992236310-6edddc08acff?auto=format&fit=crop&w=800&q=80",
+    "videoUrl": "https://www.youtube.com/embed/Ydc_NefUCM0",
+    "summary": "Keep your non-stick natural cast iron skillet lasting for generations with proper oil coating and moisture prevention.",
+    "steps": [
+      "Never soak cast iron in soapy water or put in a dishwasher.",
+      "Scrub warm pan with coarse sea salt and hot water using a stiff brush.",
+      "Dry immediately over stovetop flame and rub 1/2 tsp grapeseed oil all over."
+    ]
+  }
+]

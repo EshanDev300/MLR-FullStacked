@@ -1,0 +1,1480 @@
+[
+  {
+    "id": "recipe-1",
+    "title": "Creamy Tuscan Garlic Butter Salmon",
+    "category": "dinner",
+    "cuisine": "Italian",
+    "prepTime": 10,
+    "cookTime": 20,
+    "totalTime": 30,
+    "servings": 4,
+    "difficulty": "Easy",
+    "rating": 4.9,
+    "reviewsCount": 128,
+    "calories": 480,
+    "featured": true,
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=1000&q=80",
+    "videoUrl": "https://www.youtube.com/embed/5qap5aO4i9A",
+    "description": "Tender salmon fillets pan-seared to perfection in a silky garlic parmesan cream sauce infused with sun-dried tomatoes and baby spinach.",
+    "ingredients": [
+      {
+        "name": "Salmon Fillets",
+        "amount": 4,
+        "unit": "pieces (6 oz each)"
+      },
+      {
+        "name": "Heavy Cream",
+        "amount": 1,
+        "unit": "cup"
+      },
+      {
+        "name": "Sun-dried Tomatoes",
+        "amount": 0.5,
+        "unit": "cup (chopped)"
+      },
+      {
+        "name": "Baby Spinach",
+        "amount": 2,
+        "unit": "cups (fresh)"
+      },
+      {
+        "name": "Garlic",
+        "amount": 4,
+        "unit": "cloves (minced)"
+      },
+      {
+        "name": "Grated Parmesan Cheese",
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      {
+        "name": "Olive Oil & Butter",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Italian Seasoning",
+        "amount": 1,
+        "unit": "tsp"
+      }
+    ],
+    "instructions": [
+      "Season salmon fillets on both sides with salt, black pepper, and Italian seasoning.",
+      "Heat olive oil and butter in a large skillet over medium-high heat. Sear salmon for 5 minutes per side until golden brown, then transfer salmon to a plate.",
+      "In the same skillet, add minced garlic and sun-dried tomatoes. Sauté for 1 minute until fragrant.",
+      "Reduce heat to medium, pour in heavy cream, and bring to a gentle simmer while stirring.",
+      "Stir in grated parmesan cheese until melted and smooth, then fold in fresh baby spinach until wilted.",
+      "Return salmon fillets back into the sauce, spoon sauce over salmon, and simmer for 2 minutes before serving."
+    ],
+    "nutrition": {
+      "protein": "38g",
+      "carbs": "8g",
+      "fat": "34g",
+      "fiber": "2g"
+    },
+    "tags": [
+      "Seafood",
+      "Keto Friendly",
+      "Gluten-Free",
+      "30-Min Meal"
+    ]
+  },
+  {
+    "id": "recipe-2",
+    "title": "Avocado & Poached Egg Artisanal Toast",
+    "category": "breakfast",
+    "cuisine": "Modern American",
+    "prepTime": 5,
+    "cookTime": 10,
+    "totalTime": 15,
+    "servings": 2,
+    "difficulty": "Easy",
+    "rating": 4.8,
+    "reviewsCount": 94,
+    "calories": 340,
+    "featured": true,
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=1000&q=80",
+    "videoUrl": "https://www.youtube.com/embed/5qap5aO4i9A",
+    "description": "Crispy sourdough toast topped with mashed Hass avocado, perfectly poached eggs, microgreens, and red pepper chili flakes.",
+    "ingredients": [
+      {
+        "name": "Artisanal Sourdough Bread",
+        "amount": 2,
+        "unit": "slices"
+      },
+      {
+        "name": "Ripe Hass Avocados",
+        "amount": 2,
+        "unit": "medium"
+      },
+      {
+        "name": "Farm Fresh Eggs",
+        "amount": 2,
+        "unit": "large"
+      },
+      {
+        "name": "Lemon Juice",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Crushed Red Pepper Flakes",
+        "amount": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "Microgreens or Cilantro",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Flaky Sea Salt & Pepper",
+        "amount": 1,
+        "unit": "pinch"
+      }
+    ],
+    "instructions": [
+      "Toast sourdough bread slices until golden brown and crispy.",
+      "In a small bowl, mash ripe avocados with lemon juice, salt, and black pepper using a fork.",
+      "Bring a pot of water to a simmer with 1 tbsp white vinegar. Create a vortex with a spoon and gently drop in eggs one at a time. Poach for 3 minutes for runny yolks.",
+      "Spread mashed avocado generously onto toasted sourdough slices.",
+      "Top each toast with a warm poached egg, sprinkle crushed red pepper flakes, microgreens, and flaky sea salt."
+    ],
+    "nutrition": {
+      "protein": "14g",
+      "carbs": "28g",
+      "fat": "20g",
+      "fiber": "7g"
+    },
+    "tags": [
+      "Vegetarian",
+      "Quick Breakfast",
+      "High Fiber"
+    ]
+  },
+  {
+    "id": "recipe-3",
+    "title": "Mediterranean Quinoa & Chickpea Power Bowl",
+    "category": "lunch",
+    "cuisine": "Mediterranean",
+    "prepTime": 15,
+    "cookTime": 15,
+    "totalTime": 30,
+    "servings": 3,
+    "difficulty": "Easy",
+    "rating": 4.9,
+    "reviewsCount": 112,
+    "calories": 420,
+    "featured": true,
+    "popular": false,
+    "image": "https://images.unsplash.com/photo-1505253758473-96b7015fcd40?auto=format&fit=crop&w=1000&q=80",
+    "videoUrl": "https://www.youtube.com/embed/5qap5aO4i9A",
+    "description": "Vibrant superfood bowl featuring fluffy white quinoa, spiced roasted chickpeas, cherry tomatoes, cucumbers, Kalamata olives, and lemon-tahini dressing.",
+    "ingredients": [
+      {
+        "name": "Cooked White Quinoa",
+        "amount": 2,
+        "unit": "cups"
+      },
+      {
+        "name": "Cooked Chickpeas (Rinsed)",
+        "amount": 1.5,
+        "unit": "cups"
+      },
+      {
+        "name": "English Cucumber",
+        "amount": 1,
+        "unit": "cup (diced)"
+      },
+      {
+        "name": "Cherry Tomatoes",
+        "amount": 1,
+        "unit": "cup (halved)"
+      },
+      {
+        "name": "Kalamata Olives",
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      {
+        "name": "Crumbled Feta Cheese",
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      {
+        "name": "Tahini Dressing (Lemon & Garlic)",
+        "amount": 4,
+        "unit": "tbsp"
+      }
+    ],
+    "instructions": [
+      "In a baking sheet, toss chickpeas with olive oil, cumin, smoked paprika, and salt. Roast at 400°F (200°C) for 15 minutes until crispy.",
+      "Divide fluffy cooked quinoa evenly into serving bowls.",
+      "Arrange roasted chickpeas, diced cucumbers, halved cherry tomatoes, olives, and crumbled feta cheese in neat sections.",
+      "Drizzle generously with lemon-garlic tahini dressing before serving warm or chilled."
+    ],
+    "nutrition": {
+      "protein": "16g",
+      "carbs": "54g",
+      "fat": "16g",
+      "fiber": "11g"
+    },
+    "tags": [
+      "Vegan Option",
+      "Superfood",
+      "Gluten-Free",
+      "Meal Prep"
+    ]
+  },
+  {
+    "id": "recipe-4",
+    "title": "Matcha Green Tea Pancakes with Honey Drizzle",
+    "category": "breakfast",
+    "cuisine": "Japanese Fusion",
+    "prepTime": 10,
+    "cookTime": 10,
+    "totalTime": 20,
+    "servings": 3,
+    "difficulty": "Medium",
+    "rating": 4.7,
+    "reviewsCount": 67,
+    "calories": 390,
+    "featured": false,
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&w=1000&q=80",
+    "videoUrl": "https://www.youtube.com/embed/5qap5aO4i9A",
+    "description": "Fluffy, aromatic Japanese-style green tea pancakes stacked high and topped with fresh berries, whipped cream, and wild honey.",
+    "ingredients": [
+      {
+        "name": "All-Purpose Flour",
+        "amount": 1.5,
+        "unit": "cups"
+      },
+      {
+        "name": "Culinary Grade Matcha Powder",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Baking Powder",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Whole Milk or Almond Milk",
+        "amount": 1.25,
+        "unit": "cups"
+      },
+      {
+        "name": "Egg",
+        "amount": 1,
+        "unit": "large"
+      },
+      {
+        "name": "Pure Honey or Maple Syrup",
+        "amount": 3,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Fresh Raspberries & Blueberries",
+        "amount": 1,
+        "unit": "cup"
+      }
+    ],
+    "instructions": [
+      "Whisk flour, matcha powder, sugar, and baking powder together in a large bowl.",
+      "Whisk egg, milk, and melted butter in a separate bowl, then gently combine wet into dry ingredients.",
+      "Heat a non-stick skillet over medium-low heat and lightly brush with butter.",
+      "Pour 1/4 cup batter for each pancake. Cook until bubbles form on surface, flip gently, and cook 2 minutes more.",
+      "Stack warm pancakes, garnish with berries, and drizzle generously with honey."
+    ],
+    "nutrition": {
+      "protein": "9g",
+      "carbs": "62g",
+      "fat": "11g",
+      "fiber": "4g"
+    },
+    "tags": [
+      "Antioxidant Rich",
+      "Sweet Breakfast",
+      "Fusion"
+    ]
+  },
+  {
+    "id": "recipe-5",
+    "title": "Thai Red Curry Coconut Noodle Soup",
+    "category": "dinner",
+    "cuisine": "Thai",
+    "prepTime": 15,
+    "cookTime": 20,
+    "totalTime": 35,
+    "servings": 4,
+    "difficulty": "Medium",
+    "rating": 4.9,
+    "reviewsCount": 156,
+    "calories": 520,
+    "featured": true,
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=1000&q=80",
+    "videoUrl": "https://www.youtube.com/embed/5qap5aO4i9A",
+    "description": "Fragrant and comforting soup made with aromatic Thai red curry paste, rich coconut milk, rice noodles, mushrooms, and fresh basil.",
+    "ingredients": [
+      {
+        "name": "Thai Red Curry Paste",
+        "amount": 3,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Full-Fat Coconut Milk",
+        "amount": 1,
+        "unit": "can (14 oz)"
+      },
+      {
+        "name": "Vegetable or Chicken Broth",
+        "amount": 3,
+        "unit": "cups"
+      },
+      {
+        "name": "Rice Vermicelli Noodles",
+        "amount": 8,
+        "unit": "oz"
+      },
+      {
+        "name": "Sliced Tofu or Chicken",
+        "amount": 1,
+        "unit": "lb"
+      },
+      {
+        "name": "Shiitake Mushrooms",
+        "amount": 1,
+        "unit": "cup"
+      },
+      {
+        "name": "Fresh Lime Juice & Thai Basil",
+        "amount": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "instructions": [
+      "Heat sesame oil in a Dutch oven over medium heat. Sauté red curry paste for 2 minutes until fragrant.",
+      "Pour in coconut milk and broth, bringing to a gentle boil.",
+      "Add protein (tofu or chicken) and sliced mushrooms. Simmer for 10 minutes until cooked through.",
+      "Cook rice noodles according to package instructions, drain, and divide into soup bowls.",
+      "Ladle hot fragrant coconut curry soup over noodles, finish with lime juice, fresh cilantro, and Thai basil leaves."
+    ],
+    "nutrition": {
+      "protein": "24g",
+      "carbs": "45g",
+      "fat": "28g",
+      "fiber": "5g"
+    },
+    "tags": [
+      "Comfort Food",
+      "Spicy",
+      "Asian Fusion"
+    ]
+  },
+  {
+    "id": "recipe-6",
+    "title": "Decadent Molten Dark Chocolate Lava Cake",
+    "category": "desserts",
+    "cuisine": "French",
+    "prepTime": 15,
+    "cookTime": 12,
+    "totalTime": 27,
+    "servings": 2,
+    "difficulty": "Hard",
+    "rating": 5,
+    "reviewsCount": 210,
+    "calories": 490,
+    "featured": true,
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=1000&q=80",
+    "videoUrl": "https://www.youtube.com/embed/5qap5aO4i9A",
+    "description": "Rich dark chocolate cake with a warm, gooey liquid chocolate center, served with vanilla bean ice cream and cocoa dusting.",
+    "ingredients": [
+      {
+        "name": "70% Bittersweet Dark Chocolate",
+        "amount": 4,
+        "unit": "oz"
+      },
+      {
+        "name": "Unsalted Butter",
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      {
+        "name": "Eggs & Egg Yolks",
+        "amount": 2,
+        "unit": "whole + 2 yolks"
+      },
+      {
+        "name": "Powdered Sugar",
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      {
+        "name": "All-Purpose Flour",
+        "amount": 3,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Vanilla Bean Ice Cream",
+        "amount": 2,
+        "unit": "scoops"
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 425°F (220°C). Grease 2 ramekins with butter and dust with cocoa powder.",
+      "Melt dark chocolate and butter together in a heatproof bowl set over simmering water until smooth.",
+      "Whisk eggs, egg yolks, powdered sugar, and vanilla extract until pale and thick.",
+      "Fold melted chocolate mixture into eggs, then gently fold in flour until just combined.",
+      "Divide batter between ramekins and bake for exactly 12 minutes until edges are firm but center jiggles.",
+      "Invert onto dessert plates, dust with powdered sugar, and serve immediately with vanilla bean ice cream."
+    ],
+    "nutrition": {
+      "protein": "8g",
+      "carbs": "42g",
+      "fat": "32g",
+      "fiber": "4g"
+    },
+    "tags": [
+      "Dessert",
+      "Chocolate Lover",
+      "Gourmet"
+    ]
+  },
+  {
+    "id": "recipe-7",
+    "title": "Crispy Air-Fried Truffle Parmesan Fries",
+    "category": "snacks",
+    "cuisine": "American",
+    "prepTime": 10,
+    "cookTime": 20,
+    "totalTime": 30,
+    "servings": 4,
+    "difficulty": "Easy",
+    "rating": 4.8,
+    "reviewsCount": 88,
+    "calories": 280,
+    "featured": false,
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1576107232684-1279f390859f?auto=format&fit=crop&w=1000&q=80",
+    "videoUrl": "https://www.youtube.com/embed/5qap5aO4i9A",
+    "description": "Golden crispy potato wedges tossed in white truffle oil, grated Parmigiano-Reggiano, chopped parsley, and garlic sea salt.",
+    "ingredients": [
+      {
+        "name": "Russet Potatoes",
+        "amount": 3,
+        "unit": "large"
+      },
+      {
+        "name": "White Truffle Oil",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Freshly Grated Parmesan",
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      {
+        "name": "Fresh Parsley (Minced)",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Garlic Powder & Salt",
+        "amount": 1,
+        "unit": "tsp"
+      }
+    ],
+    "instructions": [
+      "Cut potatoes into thin uniform fry sticks and soak in cold water for 15 minutes. Drain and dry thoroughly.",
+      "Toss fries with 1 tbsp olive oil, garlic powder, and sea salt.",
+      "Air-fry at 400°F (200°C) for 18-20 minutes, shaking the basket halfway, until extra golden and crispy.",
+      "Transfer hot fries to a bowl, toss with white truffle oil, grated parmesan cheese, and minced fresh parsley."
+    ],
+    "nutrition": {
+      "protein": "6g",
+      "carbs": "38g",
+      "fat": "12g",
+      "fiber": "4g"
+    },
+    "tags": [
+      "Air Fryer",
+      "Truffle",
+      "Party Snack"
+    ]
+  },
+  {
+    "id": "recipe-8",
+    "title": "Authentic Mexican Street Corn (Elote Bowl)",
+    "category": "snacks",
+    "cuisine": "Mexican",
+    "prepTime": 10,
+    "cookTime": 10,
+    "totalTime": 20,
+    "servings": 4,
+    "difficulty": "Easy",
+    "rating": 4.9,
+    "reviewsCount": 104,
+    "calories": 260,
+    "featured": false,
+    "popular": false,
+    "image": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=1000&q=80",
+    "videoUrl": "https://www.youtube.com/embed/5qap5aO4i9A",
+    "description": "Charred sweet corn mixed with cotija cheese, tangy crema, cilantro, lime juice, and chili powder spice blend.",
+    "ingredients": [
+      {
+        "name": "Sweet Corn Kernels",
+        "amount": 4,
+        "unit": "cups"
+      },
+      {
+        "name": "Cotija Cheese (Crumble)",
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      {
+        "name": "Mexican Crema or Mayo",
+        "amount": 3,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Fresh Cilantro",
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      {
+        "name": "Tajin Chili Powder",
+        "amount": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "Lime Juice",
+        "amount": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "instructions": [
+      "Heat a cast-iron skillet over high heat with 1 tbsp butter. Add corn kernels and char for 8-10 minutes without stirring too frequently.",
+      "Remove corn from heat and let cool slightly.",
+      "Mix in crema, lime juice, Tajin chili powder, and half of the cotija cheese.",
+      "Serve warm in bowls topped with remaining cotija cheese, extra cilantro, and lime wedges."
+    ],
+    "nutrition": {
+      "protein": "7g",
+      "carbs": "30g",
+      "fat": "14g",
+      "fiber": "4g"
+    },
+    "tags": [
+      "Street Food",
+      "Gluten-Free",
+      "Vegetarian"
+    ]
+  },
+  {
+    "id": "recipe-200",
+    "title": "Breakfast Masterpiece 1",
+    "category": "breakfast",
+    "cuisine": "Gourmet",
+    "prepTime": 15,
+    "cookTime": 25,
+    "totalTime": 40,
+    "servings": 2,
+    "difficulty": "Medium",
+    "rating": 4.8,
+    "reviewsCount": 150,
+    "calories": 500,
+    "featured": false,
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=1000&q=80",
+    "description": "An exquisite breakfast dish carefully curated for the ultimate gourmet experience, featuring fresh ingredients and bold flavors.",
+    "ingredients": [
+      {
+        "name": "Gourmet Base Ingredient",
+        "amount": 2,
+        "unit": "cups"
+      },
+      {
+        "name": "Fresh Herbs",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Premium Olive Oil",
+        "amount": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "instructions": [
+      "Prepare the fresh ingredients with precision.",
+      "Cook over medium heat, bringing out the bold flavors.",
+      "Garnish and serve immediately."
+    ],
+    "nutrition": {
+      "protein": "25g",
+      "carbs": "35g",
+      "fat": "20g",
+      "fiber": "8g"
+    },
+    "tags": [
+      "Gourmet",
+      "breakfast"
+    ]
+  },
+  {
+    "id": "recipe-201",
+    "title": "Breakfast Masterpiece 2",
+    "category": "breakfast",
+    "cuisine": "Gourmet",
+    "prepTime": 15,
+    "cookTime": 25,
+    "totalTime": 40,
+    "servings": 2,
+    "difficulty": "Medium",
+    "rating": 4.8,
+    "reviewsCount": 151,
+    "calories": 500,
+    "featured": false,
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1494859802809-d069c3b71a8a?auto=format&fit=crop&w=1000&q=80",
+    "description": "An exquisite breakfast dish carefully curated for the ultimate gourmet experience, featuring fresh ingredients and bold flavors.",
+    "ingredients": [
+      {
+        "name": "Gourmet Base Ingredient",
+        "amount": 2,
+        "unit": "cups"
+      },
+      {
+        "name": "Fresh Herbs",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Premium Olive Oil",
+        "amount": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "instructions": [
+      "Prepare the fresh ingredients with precision.",
+      "Cook over medium heat, bringing out the bold flavors.",
+      "Garnish and serve immediately."
+    ],
+    "nutrition": {
+      "protein": "25g",
+      "carbs": "35g",
+      "fat": "20g",
+      "fiber": "8g"
+    },
+    "tags": [
+      "Gourmet",
+      "breakfast"
+    ]
+  },
+  {
+    "id": "recipe-202",
+    "title": "Breakfast Masterpiece 3",
+    "category": "breakfast",
+    "cuisine": "Gourmet",
+    "prepTime": 15,
+    "cookTime": 25,
+    "totalTime": 40,
+    "servings": 2,
+    "difficulty": "Medium",
+    "rating": 4.8,
+    "reviewsCount": 152,
+    "calories": 500,
+    "featured": false,
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1495214783159-3503fd1b572d?auto=format&fit=crop&w=1000&q=80",
+    "description": "An exquisite breakfast dish carefully curated for the ultimate gourmet experience, featuring fresh ingredients and bold flavors.",
+    "ingredients": [
+      {
+        "name": "Gourmet Base Ingredient",
+        "amount": 2,
+        "unit": "cups"
+      },
+      {
+        "name": "Fresh Herbs",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Premium Olive Oil",
+        "amount": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "instructions": [
+      "Prepare the fresh ingredients with precision.",
+      "Cook over medium heat, bringing out the bold flavors.",
+      "Garnish and serve immediately."
+    ],
+    "nutrition": {
+      "protein": "25g",
+      "carbs": "35g",
+      "fat": "20g",
+      "fiber": "8g"
+    },
+    "tags": [
+      "Gourmet",
+      "breakfast"
+    ]
+  },
+  {
+    "id": "recipe-203",
+    "title": "Lunch Masterpiece 1",
+    "category": "lunch",
+    "cuisine": "Gourmet",
+    "prepTime": 15,
+    "cookTime": 25,
+    "totalTime": 40,
+    "servings": 2,
+    "difficulty": "Medium",
+    "rating": 4.8,
+    "reviewsCount": 150,
+    "calories": 500,
+    "featured": false,
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1000&q=80",
+    "description": "An exquisite lunch dish carefully curated for the ultimate gourmet experience, featuring fresh ingredients and bold flavors.",
+    "ingredients": [
+      {
+        "name": "Gourmet Base Ingredient",
+        "amount": 2,
+        "unit": "cups"
+      },
+      {
+        "name": "Fresh Herbs",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Premium Olive Oil",
+        "amount": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "instructions": [
+      "Prepare the fresh ingredients with precision.",
+      "Cook over medium heat, bringing out the bold flavors.",
+      "Garnish and serve immediately."
+    ],
+    "nutrition": {
+      "protein": "25g",
+      "carbs": "35g",
+      "fat": "20g",
+      "fiber": "8g"
+    },
+    "tags": [
+      "Gourmet",
+      "lunch"
+    ]
+  },
+  {
+    "id": "recipe-204",
+    "title": "Lunch Masterpiece 2",
+    "category": "lunch",
+    "cuisine": "Gourmet",
+    "prepTime": 15,
+    "cookTime": 25,
+    "totalTime": 40,
+    "servings": 2,
+    "difficulty": "Medium",
+    "rating": 4.8,
+    "reviewsCount": 151,
+    "calories": 500,
+    "featured": false,
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1000&q=80",
+    "description": "An exquisite lunch dish carefully curated for the ultimate gourmet experience, featuring fresh ingredients and bold flavors.",
+    "ingredients": [
+      {
+        "name": "Gourmet Base Ingredient",
+        "amount": 2,
+        "unit": "cups"
+      },
+      {
+        "name": "Fresh Herbs",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Premium Olive Oil",
+        "amount": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "instructions": [
+      "Prepare the fresh ingredients with precision.",
+      "Cook over medium heat, bringing out the bold flavors.",
+      "Garnish and serve immediately."
+    ],
+    "nutrition": {
+      "protein": "25g",
+      "carbs": "35g",
+      "fat": "20g",
+      "fiber": "8g"
+    },
+    "tags": [
+      "Gourmet",
+      "lunch"
+    ]
+  },
+  {
+    "id": "recipe-205",
+    "title": "Lunch Masterpiece 3",
+    "category": "lunch",
+    "cuisine": "Gourmet",
+    "prepTime": 15,
+    "cookTime": 25,
+    "totalTime": 40,
+    "servings": 2,
+    "difficulty": "Medium",
+    "rating": 4.8,
+    "reviewsCount": 152,
+    "calories": 500,
+    "featured": false,
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1000&q=80",
+    "description": "An exquisite lunch dish carefully curated for the ultimate gourmet experience, featuring fresh ingredients and bold flavors.",
+    "ingredients": [
+      {
+        "name": "Gourmet Base Ingredient",
+        "amount": 2,
+        "unit": "cups"
+      },
+      {
+        "name": "Fresh Herbs",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Premium Olive Oil",
+        "amount": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "instructions": [
+      "Prepare the fresh ingredients with precision.",
+      "Cook over medium heat, bringing out the bold flavors.",
+      "Garnish and serve immediately."
+    ],
+    "nutrition": {
+      "protein": "25g",
+      "carbs": "35g",
+      "fat": "20g",
+      "fiber": "8g"
+    },
+    "tags": [
+      "Gourmet",
+      "lunch"
+    ]
+  },
+  {
+    "id": "recipe-206",
+    "title": "Dinner Masterpiece 1",
+    "category": "dinner",
+    "cuisine": "Gourmet",
+    "prepTime": 15,
+    "cookTime": 25,
+    "totalTime": 40,
+    "servings": 2,
+    "difficulty": "Medium",
+    "rating": 4.8,
+    "reviewsCount": 150,
+    "calories": 500,
+    "featured": false,
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80",
+    "description": "An exquisite dinner dish carefully curated for the ultimate gourmet experience, featuring fresh ingredients and bold flavors.",
+    "ingredients": [
+      {
+        "name": "Gourmet Base Ingredient",
+        "amount": 2,
+        "unit": "cups"
+      },
+      {
+        "name": "Fresh Herbs",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Premium Olive Oil",
+        "amount": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "instructions": [
+      "Prepare the fresh ingredients with precision.",
+      "Cook over medium heat, bringing out the bold flavors.",
+      "Garnish and serve immediately."
+    ],
+    "nutrition": {
+      "protein": "25g",
+      "carbs": "35g",
+      "fat": "20g",
+      "fiber": "8g"
+    },
+    "tags": [
+      "Gourmet",
+      "dinner"
+    ]
+  },
+  {
+    "id": "recipe-207",
+    "title": "Dinner Masterpiece 2",
+    "category": "dinner",
+    "cuisine": "Gourmet",
+    "prepTime": 15,
+    "cookTime": 25,
+    "totalTime": 40,
+    "servings": 2,
+    "difficulty": "Medium",
+    "rating": 4.8,
+    "reviewsCount": 151,
+    "calories": 500,
+    "featured": false,
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=1000&q=80",
+    "description": "An exquisite dinner dish carefully curated for the ultimate gourmet experience, featuring fresh ingredients and bold flavors.",
+    "ingredients": [
+      {
+        "name": "Gourmet Base Ingredient",
+        "amount": 2,
+        "unit": "cups"
+      },
+      {
+        "name": "Fresh Herbs",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Premium Olive Oil",
+        "amount": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "instructions": [
+      "Prepare the fresh ingredients with precision.",
+      "Cook over medium heat, bringing out the bold flavors.",
+      "Garnish and serve immediately."
+    ],
+    "nutrition": {
+      "protein": "25g",
+      "carbs": "35g",
+      "fat": "20g",
+      "fiber": "8g"
+    },
+    "tags": [
+      "Gourmet",
+      "dinner"
+    ]
+  },
+  {
+    "id": "recipe-208",
+    "title": "Dinner Masterpiece 3",
+    "category": "dinner",
+    "cuisine": "Gourmet",
+    "prepTime": 15,
+    "cookTime": 25,
+    "totalTime": 40,
+    "servings": 2,
+    "difficulty": "Medium",
+    "rating": 4.8,
+    "reviewsCount": 152,
+    "calories": 500,
+    "featured": false,
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=1000&q=80",
+    "description": "An exquisite dinner dish carefully curated for the ultimate gourmet experience, featuring fresh ingredients and bold flavors.",
+    "ingredients": [
+      {
+        "name": "Gourmet Base Ingredient",
+        "amount": 2,
+        "unit": "cups"
+      },
+      {
+        "name": "Fresh Herbs",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Premium Olive Oil",
+        "amount": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "instructions": [
+      "Prepare the fresh ingredients with precision.",
+      "Cook over medium heat, bringing out the bold flavors.",
+      "Garnish and serve immediately."
+    ],
+    "nutrition": {
+      "protein": "25g",
+      "carbs": "35g",
+      "fat": "20g",
+      "fiber": "8g"
+    },
+    "tags": [
+      "Gourmet",
+      "dinner"
+    ]
+  },
+  {
+    "id": "recipe-209",
+    "title": "Snacks Masterpiece 1",
+    "category": "snacks",
+    "cuisine": "Gourmet",
+    "prepTime": 15,
+    "cookTime": 25,
+    "totalTime": 40,
+    "servings": 2,
+    "difficulty": "Medium",
+    "rating": 4.8,
+    "reviewsCount": 150,
+    "calories": 500,
+    "featured": false,
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?auto=format&fit=crop&w=1000&q=80",
+    "description": "An exquisite snacks dish carefully curated for the ultimate gourmet experience, featuring fresh ingredients and bold flavors.",
+    "ingredients": [
+      {
+        "name": "Gourmet Base Ingredient",
+        "amount": 2,
+        "unit": "cups"
+      },
+      {
+        "name": "Fresh Herbs",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Premium Olive Oil",
+        "amount": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "instructions": [
+      "Prepare the fresh ingredients with precision.",
+      "Cook over medium heat, bringing out the bold flavors.",
+      "Garnish and serve immediately."
+    ],
+    "nutrition": {
+      "protein": "25g",
+      "carbs": "35g",
+      "fat": "20g",
+      "fiber": "8g"
+    },
+    "tags": [
+      "Gourmet",
+      "snacks"
+    ]
+  },
+  {
+    "id": "recipe-210",
+    "title": "Snacks Masterpiece 2",
+    "category": "snacks",
+    "cuisine": "Gourmet",
+    "prepTime": 15,
+    "cookTime": 25,
+    "totalTime": 40,
+    "servings": 2,
+    "difficulty": "Medium",
+    "rating": 4.8,
+    "reviewsCount": 151,
+    "calories": 500,
+    "featured": false,
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1621852004158-f3bc188ace2d?auto=format&fit=crop&w=1000&q=80",
+    "description": "An exquisite snacks dish carefully curated for the ultimate gourmet experience, featuring fresh ingredients and bold flavors.",
+    "ingredients": [
+      {
+        "name": "Gourmet Base Ingredient",
+        "amount": 2,
+        "unit": "cups"
+      },
+      {
+        "name": "Fresh Herbs",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Premium Olive Oil",
+        "amount": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "instructions": [
+      "Prepare the fresh ingredients with precision.",
+      "Cook over medium heat, bringing out the bold flavors.",
+      "Garnish and serve immediately."
+    ],
+    "nutrition": {
+      "protein": "25g",
+      "carbs": "35g",
+      "fat": "20g",
+      "fiber": "8g"
+    },
+    "tags": [
+      "Gourmet",
+      "snacks"
+    ]
+  },
+  {
+    "id": "recipe-211",
+    "title": "Snacks Masterpiece 3",
+    "category": "snacks",
+    "cuisine": "Gourmet",
+    "prepTime": 15,
+    "cookTime": 25,
+    "totalTime": 40,
+    "servings": 2,
+    "difficulty": "Medium",
+    "rating": 4.8,
+    "reviewsCount": 152,
+    "calories": 500,
+    "featured": false,
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1000&q=80",
+    "description": "An exquisite snacks dish carefully curated for the ultimate gourmet experience, featuring fresh ingredients and bold flavors.",
+    "ingredients": [
+      {
+        "name": "Gourmet Base Ingredient",
+        "amount": 2,
+        "unit": "cups"
+      },
+      {
+        "name": "Fresh Herbs",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Premium Olive Oil",
+        "amount": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "instructions": [
+      "Prepare the fresh ingredients with precision.",
+      "Cook over medium heat, bringing out the bold flavors.",
+      "Garnish and serve immediately."
+    ],
+    "nutrition": {
+      "protein": "25g",
+      "carbs": "35g",
+      "fat": "20g",
+      "fiber": "8g"
+    },
+    "tags": [
+      "Gourmet",
+      "snacks"
+    ]
+  },
+  {
+    "id": "recipe-212",
+    "title": "Desserts Masterpiece 1",
+    "category": "desserts",
+    "cuisine": "Gourmet",
+    "prepTime": 15,
+    "cookTime": 25,
+    "totalTime": 40,
+    "servings": 2,
+    "difficulty": "Medium",
+    "rating": 4.8,
+    "reviewsCount": 150,
+    "calories": 500,
+    "featured": false,
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1000&q=80",
+    "description": "An exquisite desserts dish carefully curated for the ultimate gourmet experience, featuring fresh ingredients and bold flavors.",
+    "ingredients": [
+      {
+        "name": "Gourmet Base Ingredient",
+        "amount": 2,
+        "unit": "cups"
+      },
+      {
+        "name": "Fresh Herbs",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Premium Olive Oil",
+        "amount": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "instructions": [
+      "Prepare the fresh ingredients with precision.",
+      "Cook over medium heat, bringing out the bold flavors.",
+      "Garnish and serve immediately."
+    ],
+    "nutrition": {
+      "protein": "25g",
+      "carbs": "35g",
+      "fat": "20g",
+      "fiber": "8g"
+    },
+    "tags": [
+      "Gourmet",
+      "desserts"
+    ]
+  },
+  {
+    "id": "recipe-213",
+    "title": "Desserts Masterpiece 2",
+    "category": "desserts",
+    "cuisine": "Gourmet",
+    "prepTime": 15,
+    "cookTime": 25,
+    "totalTime": 40,
+    "servings": 2,
+    "difficulty": "Medium",
+    "rating": 4.8,
+    "reviewsCount": 151,
+    "calories": 500,
+    "featured": false,
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=1000&q=80",
+    "description": "An exquisite desserts dish carefully curated for the ultimate gourmet experience, featuring fresh ingredients and bold flavors.",
+    "ingredients": [
+      {
+        "name": "Gourmet Base Ingredient",
+        "amount": 2,
+        "unit": "cups"
+      },
+      {
+        "name": "Fresh Herbs",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Premium Olive Oil",
+        "amount": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "instructions": [
+      "Prepare the fresh ingredients with precision.",
+      "Cook over medium heat, bringing out the bold flavors.",
+      "Garnish and serve immediately."
+    ],
+    "nutrition": {
+      "protein": "25g",
+      "carbs": "35g",
+      "fat": "20g",
+      "fiber": "8g"
+    },
+    "tags": [
+      "Gourmet",
+      "desserts"
+    ]
+  },
+  {
+    "id": "recipe-214",
+    "title": "Desserts Masterpiece 3",
+    "category": "desserts",
+    "cuisine": "Gourmet",
+    "prepTime": 15,
+    "cookTime": 25,
+    "totalTime": 40,
+    "servings": 2,
+    "difficulty": "Medium",
+    "rating": 4.8,
+    "reviewsCount": 152,
+    "calories": 500,
+    "featured": false,
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&w=1000&q=80",
+    "description": "An exquisite desserts dish carefully curated for the ultimate gourmet experience, featuring fresh ingredients and bold flavors.",
+    "ingredients": [
+      {
+        "name": "Gourmet Base Ingredient",
+        "amount": 2,
+        "unit": "cups"
+      },
+      {
+        "name": "Fresh Herbs",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Premium Olive Oil",
+        "amount": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "instructions": [
+      "Prepare the fresh ingredients with precision.",
+      "Cook over medium heat, bringing out the bold flavors.",
+      "Garnish and serve immediately."
+    ],
+    "nutrition": {
+      "protein": "25g",
+      "carbs": "35g",
+      "fat": "20g",
+      "fiber": "8g"
+    },
+    "tags": [
+      "Gourmet",
+      "desserts"
+    ]
+  },
+  {
+    "id": "recipe-215",
+    "title": "Vegan Masterpiece 1",
+    "category": "vegan",
+    "cuisine": "Gourmet",
+    "prepTime": 15,
+    "cookTime": 25,
+    "totalTime": 40,
+    "servings": 2,
+    "difficulty": "Medium",
+    "rating": 4.8,
+    "reviewsCount": 150,
+    "calories": 500,
+    "featured": false,
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&w=1000&q=80",
+    "description": "An exquisite vegan dish carefully curated for the ultimate gourmet experience, featuring fresh ingredients and bold flavors.",
+    "ingredients": [
+      {
+        "name": "Gourmet Base Ingredient",
+        "amount": 2,
+        "unit": "cups"
+      },
+      {
+        "name": "Fresh Herbs",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Premium Olive Oil",
+        "amount": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "instructions": [
+      "Prepare the fresh ingredients with precision.",
+      "Cook over medium heat, bringing out the bold flavors.",
+      "Garnish and serve immediately."
+    ],
+    "nutrition": {
+      "protein": "25g",
+      "carbs": "35g",
+      "fat": "20g",
+      "fiber": "8g"
+    },
+    "tags": [
+      "Gourmet",
+      "vegan"
+    ]
+  },
+  {
+    "id": "recipe-216",
+    "title": "Vegan Masterpiece 2",
+    "category": "vegan",
+    "cuisine": "Gourmet",
+    "prepTime": 15,
+    "cookTime": 25,
+    "totalTime": 40,
+    "servings": 2,
+    "difficulty": "Medium",
+    "rating": 4.8,
+    "reviewsCount": 151,
+    "calories": 500,
+    "featured": false,
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1000&q=80",
+    "description": "An exquisite vegan dish carefully curated for the ultimate gourmet experience, featuring fresh ingredients and bold flavors.",
+    "ingredients": [
+      {
+        "name": "Gourmet Base Ingredient",
+        "amount": 2,
+        "unit": "cups"
+      },
+      {
+        "name": "Fresh Herbs",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Premium Olive Oil",
+        "amount": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "instructions": [
+      "Prepare the fresh ingredients with precision.",
+      "Cook over medium heat, bringing out the bold flavors.",
+      "Garnish and serve immediately."
+    ],
+    "nutrition": {
+      "protein": "25g",
+      "carbs": "35g",
+      "fat": "20g",
+      "fiber": "8g"
+    },
+    "tags": [
+      "Gourmet",
+      "vegan"
+    ]
+  },
+  {
+    "id": "recipe-217",
+    "title": "Vegan Masterpiece 3",
+    "category": "vegan",
+    "cuisine": "Gourmet",
+    "prepTime": 15,
+    "cookTime": 25,
+    "totalTime": 40,
+    "servings": 2,
+    "difficulty": "Medium",
+    "rating": 4.8,
+    "reviewsCount": 152,
+    "calories": 500,
+    "featured": false,
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1000&q=80",
+    "description": "An exquisite vegan dish carefully curated for the ultimate gourmet experience, featuring fresh ingredients and bold flavors.",
+    "ingredients": [
+      {
+        "name": "Gourmet Base Ingredient",
+        "amount": 2,
+        "unit": "cups"
+      },
+      {
+        "name": "Fresh Herbs",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Premium Olive Oil",
+        "amount": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "instructions": [
+      "Prepare the fresh ingredients with precision.",
+      "Cook over medium heat, bringing out the bold flavors.",
+      "Garnish and serve immediately."
+    ],
+    "nutrition": {
+      "protein": "25g",
+      "carbs": "35g",
+      "fat": "20g",
+      "fiber": "8g"
+    },
+    "tags": [
+      "Gourmet",
+      "vegan"
+    ]
+  }
+]
