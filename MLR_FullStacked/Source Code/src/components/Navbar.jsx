@@ -218,8 +218,8 @@ export const Navbar = ({
                 
                 {moreMenuOpen && (
                   <div 
-                    className="absolute right-0 glass-panel-glow border border-amber-500/40 rounded-2xl py-2.5 px-1.5 bg-[#140406]/98 backdrop-blur-2xl shadow-2xl min-w-[200px]"
-                    style={{ top: 'calc(100% + 8px)', zIndex: 250 }}
+                    className="absolute right-0 glass-panel-glow border border-amber-500/40 rounded-2xl py-2.5 px-1.5 bg-[#140406]/98 backdrop-blur-2xl shadow-2xl min-w-[200px] mt-4"
+                    style={{ top: '100%', zIndex: 250 }}
                   >
                     {navItems.slice(visibleCount).map((item) => {
                       const Icon = item.icon;

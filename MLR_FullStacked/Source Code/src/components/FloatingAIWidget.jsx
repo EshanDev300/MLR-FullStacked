@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Sparkles, X, Send, Bot } from 'lucide-react';
-import { answerChefQuestion, detectLanguage, generateAIRecipe, isChefQuestion } from '../utils/aiEngine';
+import { answerChefQuestion, detectLanguage, generateAIRecipe, isChefQuestion, isGreeting, getChefGreeting } from '../utils/aiEngine';
 import { soundSynth } from '../utils/sound';
 
 export const TypingText = ({ text }) => {
@@ -27,7 +27,7 @@ export const FloatingAIWidget = ({ onSelectRecipe }) => {
   const [chatHistory, setChatHistory] = useState([
     {
       sender: 'ai',
-      text: 'Greetings! I am your AI Chef Agent. Tell me what ingredients you have in your kitchen!'
+      text: 'Greetings! I am your AI Chef Agent. Tell me what ingredients you have in your kitchen or what dish you want to cook!'
     }
   ]);
 
@@ -42,6 +42,16 @@ export const FloatingAIWidget = ({ onSelectRecipe }) => {
     soundSynth.playClick();
 
     const detectedLanguage = detectLanguage(userText);
+
+    // Handle Greetings / Casual Chat
+    if (isGreeting(userText)) {
+      const greetingMsg = getChefGreeting(userText, detectedLanguage);
+      setLoading(false);
+      setChatHistory((prev) => [...prev, { sender: 'ai', text: greetingMsg }]);
+      return;
+    }
+
+    // Handle Cooking Questions
     if (isChefQuestion(userText)) {
       const answer = await answerChefQuestion({ question: userText, language: detectedLanguage });
       setLoading(false);

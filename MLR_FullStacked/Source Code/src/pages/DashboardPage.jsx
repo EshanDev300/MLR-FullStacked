@@ -16,6 +16,7 @@ export const DashboardPage = () => {
   const [password, setPassword] = useState('');
   const [phone, setPhone] = useState('');
   const [country, setCountry] = useState('');
+  const [successMsg, setSuccessMsg] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -31,6 +32,7 @@ export const DashboardPage = () => {
   const handleAuth = async (e) => {
     e.preventDefault();
     setError('');
+    setSuccessMsg('');
 
     if (!emailRegex.test(email)) {
       setError('Please enter a valid email address.');
@@ -45,10 +47,11 @@ export const DashboardPage = () => {
     try {
       if (authMode === 'register') {
         if (!name.trim()) throw new Error('Name is required for registration.');
-        const newUser = await registerUser(name, email, password, phone, country);
-        // Auto login after register
-        const sessionUser = await loginUser(email, password);
-        setUser(sessionUser);
+        await registerUser(name, email, password, phone, country);
+        // Do NOT auto-login. Prompt user to login manually.
+        setSuccessMsg('Registration successful! Please log in with your email and password to access your dashboard.');
+        setAuthMode('login');
+        setPassword('');
       } else {
         const sessionUser = await loginUser(email, password);
         setUser(sessionUser);
@@ -148,6 +151,13 @@ export const DashboardPage = () => {
                 Register Account
               </button>
             </div>
+
+            {successMsg && (
+              <div className="mb-6 p-3 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-start space-x-3 animate-fadeIn">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
+                <p className="text-xs text-emerald-300 leading-relaxed font-medium">{successMsg}</p>
+              </div>
+            )}
 
             {error && (
               <div className="mb-6 p-3 rounded-xl bg-red-500/10 border border-red-500/30 flex items-start space-x-3 animate-fadeIn">

@@ -37,22 +37,66 @@ export function detectLanguage(text = '') {
     'tel', 'pani', 'masala', 'roti', 'sabzi', 'gosht', 'chawal', 'pyaaz', 'pyaz',
     'tamatar', 'lehsan', 'lahsun', 'adrak', 'dahi', 'karahi', 'korma', 'biryani',
     'pulao', 'nihari', 'haleem', 'tikka', 'shukriya', 'wala', 'wali', 'kuch', 'accha',
-    'lazeez', 'lajawab', 'boti', 'seekh', 'daal', 'paneer', 'paratha', 'chai'
+    'lazeez', 'lajawab', 'boti', 'seekh', 'daal', 'paneer', 'paratha', 'chai', 'salam',
+    'kese', 'kaisa', 'kaun', 'aap', 'mera', 'meri', 'khana', 'paka'
   ];
 
   const words = lower.split(/\s+/);
   const matchCount = words.filter(w => romanUrduKeywords.includes(w.replace(/[^a-z]/g, ''))).length;
-  if (matchCount >= 1 || /\b(mujhe|kaise|batao|banana hai|banani hai|chahiye|karna hai|ki recipe)\b/i.test(lower)) {
+  if (matchCount >= 1 || /\b(mujhe|kaise|batao|banana hai|banani hai|chahiye|karna hai|ki recipe|salam|assalam)\b/i.test(lower)) {
     return 'roman_ur';
   }
 
   // European languages keyword detection
-  if (/\b(que|como|para|cocinar|receta|pollo|pescado|ajo|cebolla|horno|aceite|delicioso|gracias)\b/i.test(lower)) return 'es';
-  if (/\b(comment|pourquoi|recette|cuire|faire|poulet|poisson|ail|oignon|huile|delicieux|merci)\b/i.test(lower)) return 'fr';
-  if (/\b(wie|warum|was|rezept|kochen|backen|hähnchen|knoblauch|zwiebel|öl|lecker|danke)\b/i.test(lower)) return 'de';
-  if (/\b(come|perché|cosa|ricetta|cucinare|pollo|pesce|aglio|cipolla|olio|delizioso|grazie)\b/i.test(lower)) return 'it';
+  if (/\b(que|como|para|cocinar|receta|pollo|pescado|ajo|cebolla|horno|aceite|delicioso|gracias|hola)\b/i.test(lower)) return 'es';
+  if (/\b(comment|pourquoi|recette|cuire|faire|poulet|poisson|ail|oignon|huile|delicieux|merci|bonjour|salut)\b/i.test(lower)) return 'fr';
+  if (/\b(wie|warum|was|rezept|kochen|backen|hähnchen|knoblauch|zwiebel|öl|lecker|danke|hallo)\b/i.test(lower)) return 'de';
+  if (/\b(come|perché|cosa|ricetta|cucinare|pollo|pesce|aglio|cipolla|olio|delizioso|grazie|ciao)\b/i.test(lower)) return 'it';
 
   return 'en';
+}
+
+export function isGreeting(input = '') {
+  const text = typeof input === 'object' && input !== null ? (input.question || input.text || '') : String(input || '');
+  if (!text) return false;
+  const lower = text.toLowerCase().trim().replace(/[!.,?]/g, '');
+  const greetingPhrases = [
+    'hi', 'hello', 'hey', 'hi chef', 'hello chef', 'hey chef', 'good morning', 'good evening', 'good afternoon',
+    'salam', 'assalam o alaikum', 'assalamu alaikum', 'asalam alaikum', 'kese ho', 'kaise ho', 'kya hal hai', 'kya haal hai',
+    'namaste', 'namaskar', 'hola', 'bonjour', 'salut', 'hallo', 'guten tag', 'ciao', 'marhaba', 'ahlan', 'ni hao', 'konnichiwa'
+  ];
+  return greetingPhrases.includes(lower) || greetingPhrases.some(g => lower === g || lower.startsWith(`${g} `));
+}
+
+export function getChefGreeting(input = '', language = 'en') {
+  const detectedLang = detectLanguage(input) || language || 'en';
+  if (detectedLang === 'roman_ur') {
+    const urGreetings = [
+      "Walaikum Assalam! Main aapka AI Chef Agent hoon. Aaj aap kya pakana chahte hain? Apne kitchen ke ingredients (jaise chicken, pyaz, tamatar) batayein ya kisi bhi dish ka naam likhein!",
+      "Hello! Khush-Aamdeed! Main aapka shahi AI Chef hoon. Aapko kis recipe ki zaroorat hai ya cooking ke baray mein kya poochna chahte hain?",
+      "Assalam o Alaikum! Aaj kitchen mein kya khaas banne ja raha hai? Apni pasandida dish ya mojood ajzaa batayein, main mukammal recipe tayyar kar deta hoon!"
+    ];
+    return urGreetings[Math.floor(Math.random() * urGreetings.length)];
+  }
+  if (detectedLang === 'es') {
+    return "¡Hola! Soy tu Chef de Inteligencia Artificial. ¿Qué ingredientes tienes hoy en tu cocina o qué receta te gustaría preparar?";
+  }
+  if (detectedLang === 'fr') {
+    return "Bonjour ! Je suis votre Chef IA. Quels ingrédients avez-vous dans votre cuisine aujourd'hui ou quel plat souhaitez-vous préparer ?";
+  }
+  if (detectedLang === 'de') {
+    return "Hallo! Ich bin dein persönlicher KI-Küchenchef. Welche Zutaten hast du heute da oder welches Rezept möchtest du zaubern?";
+  }
+  if (detectedLang === 'hi') {
+    return "नमस्ते! मैं आपका एआई शेफ एजेंट हूँ। आज आप क्या बनाना चाहते हैं? अपनी उपलब्ध सामग्री या किसी भी डिश का नाम बताइए!";
+  }
+
+  const enGreetings = [
+    "Greetings! I am your AI Chef Agent. Tell me what ingredients you have in your kitchen or name any dish you'd like to make!",
+    "Hello there! Ready to cook something extraordinary today? Type in your available ingredients or ask me any culinary question!",
+    "Welcome! I am your master culinary AI. What would you like to prepare for breakfast, lunch, or dinner today?"
+  ];
+  return enGreetings[Math.floor(Math.random() * enGreetings.length)];
 }
 
 export function isChefQuestion(input = '') {
@@ -78,11 +122,17 @@ function extractCulinaryDish(prompt = '') {
   const raw = String(prompt || '').trim();
   const lower = raw.toLowerCase();
 
+  // If prompt is just a greeting or non-recipe text
+  if (isGreeting(raw) || lower.length <= 3) {
+    return { matched: true, dish: { key: 'karahi', name: 'Special Chicken Karahi', nameUr: 'Dhabba Style Shinwari Chicken Karahi', cat: 'dinner', cuisine: 'Pakistani Desi', time: 30 }, cleanStr: 'Chicken, tomatoes, ginger, green chilies' };
+  }
+
   // Strip conversation fillers
   const cleanStr = lower
-    .replace(/\b(i have|i want to make|i want to cook|give me a recipe for|recipe of|recipe for|how to make|how to cook|can you make|tell me recipe|dish with)\b/gi, '')
-    .replace(/\b(mujhe|banana hai|banani hai|banayein|banao|batao|chahiye|ki recipe|ka tariqa|ka tareeqa|kaise banayein|bana sakti ho|bana sakte ho|mere paas)\b/gi, '')
+    .replace(/\b(i have|i want to make|i want to cook|give me a recipe for|recipe of|recipe for|how to make|how to cook|can you make|tell me recipe|dish with|make me a|make a)\b/gi, '')
+    .replace(/\b(mujhe|banana hai|banani hai|banayein|banao|batao|chahiye|ki recipe|ka tariqa|ka tareeqa|kaise banayein|bana sakti ho|bana sakte ho|mere paas|hai|kuch|banao)\b/gi, '')
     .replace(/\b(quiero hacer|dame una receta de|receta de|como hacer|como cocinar|tengo)\b/gi, '')
+    .replace(/\b(hi|hello|hey|salam|assalam o alaikum)\b/gi, '')
     .trim();
 
   // Known signature dishes database
@@ -107,11 +157,11 @@ function extractCulinaryDish(prompt = '') {
 
   for (const dish of DISH_MAP) {
     if (lower.includes(dish.key)) {
-      return { matched: true, dish, cleanStr };
+      return { matched: true, dish, cleanStr: cleanStr || dish.name };
     }
   }
 
-  return { matched: false, dish: null, cleanStr: cleanStr || raw };
+  return { matched: false, dish: null, cleanStr: cleanStr || 'Seasonal Ingredients' };
 }
 
 // Knowledge Base for Q&A (Supports Roman Urdu, English, Urdu, Hindi, Spanish)
@@ -350,10 +400,11 @@ export async function generateAIRecipe(arg, maybeLang) {
     } else {
       // Custom Roman Urdu Recipe
       const cleanIngredients = cleanStr.split(',').map(s => s.trim()).filter(Boolean);
-      const mainName = cleanIngredients[0] ? cleanIngredients[0].charAt(0).toUpperCase() + cleanIngredients[0].slice(1) : 'Chef Special';
+      const filtered = cleanIngredients.filter(w => !['hi', 'hello', 'hey', 'salam'].includes(w.toLowerCase()));
+      const mainName = filtered[0] ? filtered[0].charAt(0).toUpperCase() + filtered[0].slice(1) : 'Chicken Masala';
       title = `Laziz ${mainName} Delight`;
-      description = `${cleanIngredients.join(', ')} se tayyar kardah aik nihayat lazeez aur aasan dish jo ${cookTime} minute mein ban jati hai.`;
-      ingredients = cleanIngredients.map((item, idx) => ({
+      description = `${filtered.length ? filtered.join(', ') : 'Ghar ke taaza masalon'} se tayyar kardah aik nihayat lazeez aur aasan dish jo ${cookTime} minute mein ban jati hai.`;
+      ingredients = (filtered.length ? filtered : ['Chicken / Meat', 'Pyaaz', 'Tamatar']).map((item, idx) => ({
         name: item.charAt(0).toUpperCase() + item.slice(1),
         amount: idx === 0 ? 1.5 : 1,
         unit: idx === 0 ? 'cup / portion' : 'piece / tbsp'
@@ -366,9 +417,9 @@ export async function generateAIRecipe(arg, maybeLang) {
         );
       }
       instructions = [
-        `Tamam ajza (${cleanIngredients.join(', ')}) ko dho kar saaf suthra kaat lein.`,
+        `Tamam ajza ko dho kar saaf suthra kaat lein.`,
         'Paan mein oil garam karein aur halki aanch par pehle lehsan adrak ko 1 minute saute karein.',
-        `Ab ${cleanIngredients[0] || 'mukhya samagri'} shamil karke 5 minute tak bhunai karein.`,
+        `Ab main ingredient shamil karke 5 minute tak bhunai karein.`,
         'Baqi masalay aur namak shamil karke darmiyani aanch par pakayein.',
         'Halka sa paani daal kar 6-8 minute dhaanp kar pakayein taake tamam zaiqay yakjaan ho jayein.',
         'Garma-garam roti ya paratha ke sath pesh karein aur lutf uthayein.'
@@ -427,7 +478,6 @@ export async function generateAIRecipe(arg, maybeLang) {
         ];
         chefNotes = "Chef's Secret: Authentic Karahi never uses onions—the entire rich gravy comes from reduced caramelized tomatoes and high-heat wok frying.";
       } else {
-        // Other matched dishes in English
         title = dish.name;
         description = `Chef-crafted ${dish.name} prepared with balanced seasonings, vibrant aromatics, and restaurant-grade technique.`;
         ingredients = [
@@ -447,13 +497,13 @@ export async function generateAIRecipe(arg, maybeLang) {
         chefNotes = "Chef's Secret: Always balance savory dishes with a final splash of fresh citrus or cold butter for a velvety restaurant finish.";
       }
     } else {
-      // General custom ingredients in English
       const cleanIngredients = cleanStr.split(',').map(s => s.trim()).filter(Boolean);
-      const p = cleanIngredients[0] ? cleanIngredients[0].charAt(0).toUpperCase() + cleanIngredients[0].slice(1) : 'Seasonal Medley';
-      const s = cleanIngredients[1] ? cleanIngredients[1].charAt(0).toUpperCase() + cleanIngredients[1].slice(1) : 'Garlic Herb';
+      const filtered = cleanIngredients.filter(w => !['hi', 'hello', 'hey', 'greetings', 'test'].includes(w.toLowerCase()));
+      const p = filtered[0] ? filtered[0].charAt(0).toUpperCase() + filtered[0].slice(1) : 'Seasonal Harvest';
+      const s = filtered[1] ? filtered[1].charAt(0).toUpperCase() + filtered[1].slice(1) : 'Garlic Herb';
       title = `Artisan Pan-Seared ${p} with ${s}`;
-      description = `A gourmet, nutrient-dense recipe designed around ${cleanIngredients.join(', ')}, finished with extra virgin olive oil and fragrant aromatics in ${cookTime} minutes.`;
-      ingredients = cleanIngredients.map((item, idx) => ({
+      description = `A gourmet, nutrient-dense recipe designed around ${filtered.length ? filtered.join(', ') : 'fresh seasonal ingredients'}, finished with extra virgin olive oil and fragrant aromatics in ${cookTime} minutes.`;
+      ingredients = (filtered.length ? filtered : ['Seasonal Vegetables', 'Olive Oil', 'Herbs']).map((item, idx) => ({
         name: item.charAt(0).toUpperCase() + item.slice(1),
         amount: idx === 0 ? 1.5 : 1,
         unit: idx === 0 ? 'cup / portion' : 'portion / tbsp'
@@ -466,9 +516,9 @@ export async function generateAIRecipe(arg, maybeLang) {
         );
       }
       instructions = [
-        `Rinse, trim, and slice ${cleanIngredients.join(', ')} into uniform bite-sized pieces.`,
+        `Rinse, trim, and slice all ingredients into uniform bite-sized pieces.`,
         'Heat 2 tablespoons of extra virgin olive oil in a heavy skillet over medium-high heat.',
-        `Add ${cleanIngredients[0] || 'main ingredient'} and sear for 4-5 minutes until golden and fragrant.`,
+        `Add primary ingredients and sear for 4-5 minutes until golden and fragrant.`,
         'Toss in the remaining ingredients, garlic, sea salt, and black pepper, stirring to coat evenly.',
         'Lower the heat, cover with lid, and let simmer for 6-8 minutes until tender and caramelized.',
         'Plate immediately, drizzle with pan juices, garnish with fresh herbs, and serve hot.'
