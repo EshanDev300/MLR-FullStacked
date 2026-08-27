@@ -66,7 +66,8 @@ export const FloatingAIWidget = ({ onSelectRecipe }) => {
       ja: `あなたのために「${recipe.title}」という料理を考えました。ご希望に合わせて味、食感、調理法を整えています。`,
       ar: `أعددت لك طبقاً مميزاً: "${recipe.title}". استخدمت طلبك لموازنة النكهة والقوام وطريقة التحضير.`,
       hi: `मैंने आपके लिए एक अनोखी डिश बनाई है: "${recipe.title}"। आपके अनुरोध के अनुसार स्वाद और विधि तैयार की गई है।`,
-      ur: `میں نے آپ کے لیے ایک منفرد ڈش تیار کی ہے: "${recipe.title}"۔ آپ کی درخواست کے مطابق ذائقہ اور طریقہ بنایا گیا ہے۔`
+      ur: `میں نے آپ کے لیے ایک منفرد ڈش تیار کی ہے: "${recipe.title}"۔ آپ کی درخواست کے مطابق ذائقہ اور طریقہ بنایا گیا ہے۔`,
+      roman_ur: `Maine aap ke liye aik behtareen aur lazeez recipe banayi hai: "${recipe.title}". Mukammal tareeqa aur ingredients dekhne ke liye neechay button par click karein!`
     }[detectedLanguage] || `I crafted a unique dish for you: "${recipe.title}". I used your request to shape the flavor, texture, and cooking approach for this answer.`;
 
     setLoading(false);
