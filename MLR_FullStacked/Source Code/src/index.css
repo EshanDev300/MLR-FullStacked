@@ -87,6 +87,13 @@
   box-shadow: 0 20px 40px -10px rgba(225, 29, 72, 0.3), 0 0 25px rgba(245, 158, 11, 0.2);
 }
 
+@media (max-resolution: 1dppx), (prefers-reduced-motion: reduce) {
+  .glass-panel, .glass-panel-glow, .glass-card {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
 .shine-surface {
   position: relative;
   isolation: isolate;
@@ -289,6 +296,13 @@ main p {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
   .ai-agent-float,
   .shine-surface::after,
   .btn-primary::after,
@@ -399,9 +413,12 @@ main p {
   background: linear-gradient(180deg, #E11D48, #F59E0B);
   border-radius: 3px;
 }
+
 /* Force hide the real system cursor across the entire page, including buttons, links, inputs, and search boxes */
-*, *:hover, *:active, *:focus {
-  cursor: none !important;
+@media (pointer: fine) and (hover: hover) {
+  *, *:hover, *:active, *:focus {
+    cursor: none !important;
+  }
 }
 
 /* Text Hover Animations */
@@ -420,4 +437,73 @@ main p {
 .hover-logo-anim:hover {
   transform: scale(1.1) rotate(-3deg);
   filter: drop-shadow(0 0 12px rgba(225, 29, 72, 0.6));
+}
+
+/* NEW ADDITIONS */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes slideInFromLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-slideInFromLeft {
+  animation: slideInFromLeft 0.5s ease-out forwards;
+}
+
+@keyframes slideInFromRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-slideInFromRight {
+  animation: slideInFromRight 0.5s ease-out forwards;
+}
+
+@keyframes slideInFromBottom {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slideInFromBottom {
+  animation: slideInFromBottom 0.5s ease-out forwards;
+}
+
+.animate-stagger-1 { animation-delay: 0.1s; }
+.animate-stagger-2 { animation-delay: 0.2s; }
+.animate-stagger-3 { animation-delay: 0.3s; }
+.animate-stagger-4 { animation-delay: 0.4s; }
+.animate-stagger-5 { animation-delay: 0.5s; }
+
+.text-shimmer {
+  position: relative;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.text-shimmer:hover {
+  animation: textShimmer 1.5s linear infinite;
+}
+
+@keyframes textShimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.page-enter {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.page-exit {
+  animation: fadeIn 0.4s ease-in reverse forwards;
 }

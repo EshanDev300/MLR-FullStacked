@@ -7,13 +7,16 @@ function getPool() {
   if (!pool) {
     pool = new Pool({
       connectionString: process.env.DATABASE_URL,
-      ssl: { rejectUnauthorized: false }
+      ssl: { rejectUnauthorized: false },
+      max: 5,
+      idleTimeoutMillis: 30000,
+      connectionTimeoutMillis: 5000
     });
   }
   return pool;
 }
 
-// Auto-create table on first call
+// Cache table creation status across warm invocations
 let tableCreated = false;
 async function ensureTable() {
   if (tableCreated) return;
@@ -29,8 +32,11 @@ async function ensureTable() {
       role VARCHAR(50) DEFAULT 'user'
     );
   `);
+
+  // Create index on email for fast lookups
+  await db.query(`CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);`);
   
-  // Seed system accounts if they don't exist
+  // Seed system accounts
   const systemAccounts = [
     { id: 'admin', name: 'System Admin', email: 'admin@specialist.cook', password: 'AdminSpecalist4321', role: 'admin' },
     { id: 'manager', name: 'General Manager', email: 'manager@cleaned.food', password: 'ManagerMaintaner0098', role: 'manager' },
@@ -48,10 +54,10 @@ async function ensureTable() {
 }
 
 export default async function handler(req, res) {
-  // CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Cache-Control', 'no-store');
   if (req.method === 'OPTIONS') return res.status(200).end();
 
   if (req.method !== 'POST') {
@@ -62,6 +68,10 @@ export default async function handler(req, res) {
     await ensureTable();
     const db = getPool();
     const { email, password } = req.body;
+
+    if (!email || !password) {
+      return res.status(400).json({ message: 'Email and password are required.' });
+    }
 
     const result = await db.query(
       'SELECT id, name, email, phone, country, role FROM users WHERE email = $1 AND password = $2',
@@ -75,6 +85,6 @@ export default async function handler(req, res) {
     return res.status(401).json({ message: 'Invalid email or password.' });
   } catch (err) {
     console.error('Login error:', err);
-    return res.status(500).json({ message: 'Server error during login' });
+    return res.status(500).json({ message: 'Server error during login. Please try again.' });
   }
 }

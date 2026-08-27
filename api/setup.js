@@ -6,14 +6,18 @@ export default async function handler(req, res) {
 
   if (!process.env.DATABASE_URL) {
     return res.status(500).json({ 
-      error: 'DATABASE_URL environment variable is not set in Vercel!' 
+      error: 'DATABASE_URL environment variable is not set in Vercel!',
+      hint: 'Go to Vercel Project Settings → Environment Variables → Add DATABASE_URL with your Neon connection string'
     });
   }
+
+  const startTime = Date.now();
 
   try {
     const pool = new Pool({
       connectionString: process.env.DATABASE_URL,
-      ssl: { rejectUnauthorized: false }
+      ssl: { rejectUnauthorized: false },
+      connectionTimeoutMillis: 5000
     });
 
     // Create users table
@@ -28,6 +32,9 @@ export default async function handler(req, res) {
         role VARCHAR(50) DEFAULT 'user'
       );
     `);
+
+    // Create index for fast lookups
+    await pool.query(`CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);`);
 
     // Seed system accounts
     const systemAccounts = [
@@ -44,14 +51,17 @@ export default async function handler(req, res) {
     }
 
     // Verify
-    const result = await pool.query('SELECT id, name, email, role FROM users');
+    const result = await pool.query('SELECT id, name, email, role FROM users ORDER BY role');
+    const elapsed = Date.now() - startTime;
 
     await pool.end();
 
     return res.status(200).json({
       success: true,
       message: 'Database initialized successfully!',
+      responseTimeMs: elapsed,
       tables_created: ['users'],
+      indexes_created: ['idx_users_email'],
       accounts_seeded: result.rows.length,
       users: result.rows
     });
@@ -59,7 +69,7 @@ export default async function handler(req, res) {
     console.error('Setup error:', err);
     return res.status(500).json({ 
       error: err.message,
-      hint: 'Make sure your DATABASE_URL is correct in Vercel Environment Variables'
+      hint: 'Make sure your DATABASE_URL is correct. It should look like: postgresql://user:pass@host/dbname?sslmode=require'
     });
   }
 }

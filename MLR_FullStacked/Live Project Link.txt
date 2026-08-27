@@ -2,11 +2,5 @@ Project Name: CookSmart - Smart Cooking & Recipe Discovery Portal
 Team Name: MLR_FullStacked
 Category: Web & App Development (TechWiz 7)
 
-Live Project Demo Link:
-http://localhost:5173
-
-Deployment Instructions:
-1. Open terminal inside the 'Source Code' folder.
-2. Run 'npm install' to install dependencies.
-3. Run 'npm run dev' to launch the local development web server.
-4. Access the web application at http://localhost:5173.
+Live Project Link:
+https://mlr-full-stacked-3zub-ctdj5j00z-eshan-s-projects3.vercel.app/

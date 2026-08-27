@@ -7,7 +7,10 @@ function getPool() {
   if (!pool) {
     pool = new Pool({
       connectionString: process.env.DATABASE_URL,
-      ssl: { rejectUnauthorized: false }
+      ssl: { rejectUnauthorized: false },
+      max: 5,
+      idleTimeoutMillis: 30000,
+      connectionTimeoutMillis: 5000
     });
   }
   return pool;
@@ -28,6 +31,7 @@ async function ensureTable() {
       role VARCHAR(50) DEFAULT 'user'
     );
   `);
+  await db.query(`CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);`);
   tableCreated = true;
 }
 
@@ -35,6 +39,7 @@ export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Cache-Control', 'no-store');
   if (req.method === 'OPTIONS') return res.status(200).end();
 
   if (req.method !== 'POST') {
@@ -45,6 +50,10 @@ export default async function handler(req, res) {
     await ensureTable();
     const db = getPool();
     const { name, email, password, phone, country } = req.body;
+
+    if (!name || !email || !password) {
+      return res.status(400).json({ message: 'Name, email, and password are required.' });
+    }
 
     // Check if email already exists
     const check = await db.query('SELECT id FROM users WHERE email = $1', [email]);
@@ -61,6 +70,6 @@ export default async function handler(req, res) {
     return res.status(201).json(result.rows[0]);
   } catch (err) {
     console.error('Register error:', err);
-    return res.status(500).json({ message: 'Server error during registration' });
+    return res.status(500).json({ message: 'Server error during registration. Please try again.' });
   }
 }
