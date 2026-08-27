@@ -63,9 +63,23 @@ export const KitchenTimerModal = ({ isOpen, onClose }) => {
     setSecondsLeft((prev) => prev + mins * 60);
   };
 
+  useEffect(() => {
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
+  }, []);
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-dark-900/80 backdrop-blur-xl animate-fadeIn">
-      <div className="relative w-full max-w-lg glass-panel-glow border border-amber-500/30 rounded-3xl p-6 sm:p-8 space-y-6 shadow-2xl">
+    <div 
+      className="fixed inset-0 z-[250] flex items-center justify-center p-3 sm:p-4 bg-black/80 backdrop-blur-xl animate-fadeIn overflow-y-auto overscroll-contain"
+      onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
+    >
+      <div 
+        className="relative w-full max-w-lg glass-panel-glow border border-amber-500/40 rounded-3xl p-5 sm:p-8 space-y-6 shadow-2xl my-auto max-h-[92vh] overflow-y-auto custom-scrollbar overscroll-contain bg-[#140406]/98"
+        onClick={(e) => e.stopPropagation()}
+      >
         
         {/* Modal Header */}
         <div className="flex items-center justify-between">
