@@ -202,12 +202,13 @@ export const Navbar = ({
             
             {/* More Dropdown */}
             {visibleCount < navItems.length && (
-              <div className="relative more-dropdown-container flex-shrink-0">
+              <div className="relative more-dropdown-container flex-shrink-0" style={{ zIndex: 200 }}>
                 <button
-                  onClick={() => setMoreMenuOpen(!moreMenuOpen)}
-                  className={`px-3 py-1.5 rounded-xl font-bold text-xs flex items-center space-x-1 whitespace-nowrap transition-all duration-200 ${
+                  onClick={(e) => { e.stopPropagation(); setMoreMenuOpen(!moreMenuOpen); }}
+                  style={{ transform: 'none' }}
+                  className={`px-3 py-1.5 rounded-xl font-bold text-xs flex items-center space-x-1 whitespace-nowrap transition-colors duration-200 !transform-none ${
                     moreMenuOpen || navItems.slice(visibleCount).some(item => activeTab === item.id)
-                      ? 'bg-white/10 text-white border border-amber-400/20'
+                      ? 'bg-gradient-to-r from-rose-600/80 to-amber-500/80 text-white border border-amber-400/40'
                       : 'text-amber-100/90 hover:text-white hover:bg-white/10'
                   }`}
                 >
@@ -216,21 +217,26 @@ export const Navbar = ({
                 </button>
                 
                 {moreMenuOpen && (
-                  <div className="absolute top-full mt-2 right-0 glass-panel-glow border border-amber-500/40 rounded-2xl py-2 px-1 z-[150] bg-[#140406]/98 backdrop-blur-2xl shadow-xl min-w-[180px] animate-fadeIn">
+                  <div 
+                    className="absolute right-0 glass-panel-glow border border-amber-500/40 rounded-2xl py-2.5 px-1.5 bg-[#140406]/98 backdrop-blur-2xl shadow-2xl min-w-[200px]"
+                    style={{ top: 'calc(100% + 8px)', zIndex: 250 }}
+                  >
                     {navItems.slice(visibleCount).map((item) => {
                       const Icon = item.icon;
                       const isActive = activeTab === item.id;
                       return (
                         <button
                           key={item.id}
-                          onClick={() => {
+                          onClick={(e) => {
+                            e.stopPropagation();
                             setActiveTab(item.id);
                             setMoreMenuOpen(false);
                           }}
-                          className={`w-full px-3 py-2 rounded-xl font-bold text-xs flex items-center justify-between transition-colors ${
+                          style={{ transform: 'none' }}
+                          className={`w-full px-3.5 py-2.5 rounded-xl font-bold text-xs flex items-center justify-between transition-colors !transform-none ${
                             isActive 
                               ? 'bg-gradient-to-r from-rose-600 to-amber-500 text-white' 
-                              : 'text-amber-100 hover:bg-white/10'
+                              : 'text-amber-100 hover:bg-white/10 hover:text-white'
                           }`}
                         >
                           <div className="flex items-center space-x-2.5">

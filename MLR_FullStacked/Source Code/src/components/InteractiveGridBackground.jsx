@@ -23,26 +23,38 @@ export default function InteractiveGridBackground({
     const container = containerRef.current;
     if (!canvas || !container) return undefined;
 
-    const context = canvas.getContext('2d');
+    // Detect mobile or low power devices
+    const isMobile = window.innerWidth < 768 || (navigator.maxTouchPoints && navigator.maxTouchPoints > 0);
+    const isLowPower = isMobile || (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4);
+
+    const context = canvas.getContext('2d', { alpha: true, desynchronized: true });
     if (!context) return undefined;
+
+    const actualIdleCount = isLowPower ? 1 : idleRandomCount;
+    const actualTrailLength = isLowPower ? 3 : trailLength;
+    const enableGlow = isLowPower ? false : glow; // Disable expensive shadowBlur on mobile GPUs
+
     const trails = [];
-    const idleTargets = Array.from({ length: idleRandomCount }, () => ({ x: 0, y: 0 }));
+    const idleTargets = Array.from({ length: actualIdleCount }, () => ({ x: 0, y: 0 }));
     const idlePositions = idleTargets.map((target) => ({ ...target }));
     let width = 1;
     let height = 1;
     let columns = 1;
     let rows = 1;
     let frameId;
+    let lastDrawTime = 0;
+    const targetFps = isLowPower ? 30 : 60;
+    const frameInterval = 1000 / targetFps;
 
     const resize = () => {
       const rect = container.getBoundingClientRect();
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const dpr = isLowPower ? 1 : Math.min(window.devicePixelRatio || 1, 1.5);
       width = Math.max(rect.width, 1);
       height = Math.max(rect.height, 1);
       columns = Math.ceil(width / gridSize);
       rows = Math.ceil(height / gridSize);
-      canvas.width = width * dpr;
-      canvas.height = height * dpr;
+      canvas.width = Math.floor(width * dpr);
+      canvas.height = Math.floor(height * dpr);
       canvas.style.width = `${width}px`;
       canvas.style.height = `${height}px`;
       context.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -58,7 +70,7 @@ export default function InteractiveGridBackground({
       const last = trails[0];
       if (last?.x === x && last?.y === y) return;
       trails.unshift({ x, y, created: performance.now() });
-      if (trails.length > trailLength * (idleRandomCount + 1)) trails.pop();
+      if (trails.length > actualTrailLength * (actualIdleCount + 1)) trails.pop();
     };
 
     const handlePointerMove = (event) => {
@@ -76,6 +88,12 @@ export default function InteractiveGridBackground({
     resize();
 
     const draw = (time) => {
+      frameId = requestAnimationFrame(draw);
+
+      // Throttle for low-power mobile devices to save battery and maintain smooth 30-60 fps
+      if (time - lastDrawTime < frameInterval) return;
+      lastDrawTime = time;
+
       context.clearRect(0, 0, width, height);
       context.strokeStyle = gridColor;
       context.lineWidth = 1;
@@ -105,16 +123,17 @@ export default function InteractiveGridBackground({
       }
 
       trails.forEach((cell, index) => {
-        const alpha = Math.max(0, 1 - index / (trailLength * 1.35));
+        const alpha = Math.max(0, 1 - index / (actualTrailLength * 1.35));
         context.fillStyle = effectColor.replace(/\d?\.?\d+\)$/g, `${alpha})`);
-        if (glow) {
+        if (enableGlow) {
           context.shadowColor = effectColor;
           context.shadowBlur = glowRadius * alpha;
         }
         context.fillRect(cell.x * gridSize + 1, cell.y * gridSize + 1, gridSize - 2, gridSize - 2);
       });
-      context.shadowBlur = 0;
-      frameId = requestAnimationFrame(draw);
+      if (enableGlow) {
+        context.shadowBlur = 0;
+      }
     };
 
     frameId = requestAnimationFrame(draw);
